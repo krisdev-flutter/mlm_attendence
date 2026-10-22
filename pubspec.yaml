@@ -38,7 +38,8 @@ dependencies:
   # GetX for state management, dependency injection and navigation
   get: ^4.6.6
   flutter_screenutil: ^5.9.3
-  shared_preferences: ^2.2.2
+  shared_preferences: ^2.5.6
+  shared_preferences_android: ^2.4.23
 
 dev_dependencies:
   flutter_test:

@@ -1,0 +1,1 @@
+rmdir /s /q "D:\Kris\mlm_attendence\mlm_attendence\build\shared_preferences_android"

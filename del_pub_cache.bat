@@ -1,0 +1,1 @@
+rmdir /s /q "C:\Users\akshaya\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_android-2.4.23"
