@@ -35,7 +35,7 @@ class AuthController extends GetxController {
   Future<bool> initialSessionRestore() async {
     // Ensure session is loaded from persistent storage
     await _loadSession();
-    
+
     final user = currentUser.value;
     if (user.email != null && user.role != null) {
       if (AuthService.isKnownEmail(user.email!)) {

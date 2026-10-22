@@ -24,7 +24,9 @@ class AttendanceRecord {
 
   bool get isToday {
     final now = DateTime.now();
-    return date.year == now.year && date.month == now.month && date.day == now.day;
+    return date.year == now.year &&
+        date.month == now.month &&
+        date.day == now.day;
   }
 
   String get status {
@@ -46,5 +48,6 @@ class AttendanceRecord {
     return '$hour:$minute ${value.hour >= 12 ? 'PM' : 'AM'}';
   }
 
-  String get dateText => '${date.day.toString().padLeft(2, '0')}/${date.month.toString().padLeft(2, '0')}/${date.year}';
+  String get dateText =>
+      '${date.day.toString().padLeft(2, '0')}/${date.month.toString().padLeft(2, '0')}/${date.year}';
 }

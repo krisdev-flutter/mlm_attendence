@@ -4,18 +4,18 @@ enum EmployeeRole { admin, seniorStaff, staff, unknown }
 
 extension EmployeeRoleExtension on EmployeeRole {
   String get displayName => switch (this) {
-        EmployeeRole.admin => 'Admin',
-        EmployeeRole.seniorStaff => 'Senior Staff',
-        EmployeeRole.staff => 'Staff',
-        EmployeeRole.unknown => 'User',
-      };
+    EmployeeRole.admin => 'Admin',
+    EmployeeRole.seniorStaff => 'Senior Staff',
+    EmployeeRole.staff => 'Staff',
+    EmployeeRole.unknown => 'User',
+  };
 
   Color get accentColor => switch (this) {
-        EmployeeRole.admin => const Color(0xFF1B2A4A),
-        EmployeeRole.seniorStaff => const Color(0xFF6C5CE7),
-        EmployeeRole.staff => const Color(0xFF38BDF8),
-        EmployeeRole.unknown => Colors.grey,
-      };
+    EmployeeRole.admin => const Color(0xFF1B2A4A),
+    EmployeeRole.seniorStaff => const Color(0xFF6C5CE7),
+    EmployeeRole.staff => const Color(0xFF38BDF8),
+    EmployeeRole.unknown => Colors.grey,
+  };
 }
 
 class Employee {

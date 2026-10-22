@@ -6,30 +6,42 @@ enum UserRole {
 
   String get displayName {
     switch (this) {
-      case UserRole.admin: return 'Admin';
-      case UserRole.seniorStaff: return 'Senior Staff';
-      case UserRole.staff: return 'Staff';
-      case UserRole.unknown: return 'User';
+      case UserRole.admin:
+        return 'Admin';
+      case UserRole.seniorStaff:
+        return 'Senior Staff';
+      case UserRole.staff:
+        return 'Staff';
+      case UserRole.unknown:
+        return 'User';
     }
   }
 
   String get value {
     switch (this) {
-      case UserRole.admin: return 'admin';
-      case UserRole.seniorStaff: return 'seniorStaff';
-      case UserRole.staff: return 'staff';
-      case UserRole.unknown: return 'unknown';
+      case UserRole.admin:
+        return 'admin';
+      case UserRole.seniorStaff:
+        return 'seniorStaff';
+      case UserRole.staff:
+        return 'staff';
+      case UserRole.unknown:
+        return 'unknown';
     }
   }
 
   static UserRole? fromString(String? role) {
     if (role == null) return null;
     switch (role.trim().toLowerCase()) {
-      case 'admin': return UserRole.admin;
+      case 'admin':
+        return UserRole.admin;
       case 'seniorstaff':
-      case 'senior': return UserRole.seniorStaff;
-      case 'staff': return UserRole.staff;
-      default: return UserRole.unknown;
+      case 'senior':
+        return UserRole.seniorStaff;
+      case 'staff':
+        return UserRole.staff;
+      default:
+        return UserRole.unknown;
     }
   }
 }
@@ -38,7 +50,7 @@ class AppUser {
   final String? email;
   final UserRole? role;
 
-  const AppUser({ this.email,  this.role});
+  const AppUser({this.email, this.role});
 
   factory AppUser.fromMap(Map<String, dynamic> map) {
     return AppUser(

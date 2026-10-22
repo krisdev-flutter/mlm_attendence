@@ -22,9 +22,16 @@ class NavDrawerItem extends StatelessWidget {
         duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.all(8),
         decoration: isSelected
-            ? BoxDecoration(color: primary.withOpacity(.1), borderRadius: BorderRadius.circular(6))
+            ? BoxDecoration(
+                color: primary.withOpacity(.1),
+                borderRadius: BorderRadius.circular(6),
+              )
             : null,
-        child: Icon(icon, color: isSelected ? primary : Colors.grey[700], size: 20),
+        child: Icon(
+          icon,
+          color: isSelected ? primary : Colors.grey[700],
+          size: 20,
+        ),
       ),
       title: Text(
         label,
@@ -34,7 +41,9 @@ class NavDrawerItem extends StatelessWidget {
         ),
       ),
       onTap: onTap,
-      tileColor: isSelected ? Theme.of(context).colorScheme.surface.withOpacity(.5) : null,
+      tileColor: isSelected
+          ? Theme.of(context).colorScheme.surface.withOpacity(.5)
+          : null,
     );
   }
 }

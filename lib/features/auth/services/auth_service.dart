@@ -25,7 +25,7 @@ class AuthService {
   String getPassword(int index) => _demoUsers[index].password;
   UserRole getRole(int index) => _demoUsers[index].role;
   int get userCount => _demoUsers.length;
-  
+
   Object? validateAndAuthenticate(
     String email,
     String password,
@@ -37,8 +37,9 @@ class AuthService {
       return 'Please enter your email address.';
     }
 
-    final emailRegex =
-        RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}');
+    final emailRegex = RegExp(
+      r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}',
+    );
     if (!emailRegex.hasMatch(trimmedEmail)) {
       return 'Please enter a valid email address.';
     }
@@ -49,10 +50,7 @@ class AuthService {
 
     for (final user in _demoUsers) {
       if (user.email == trimmedEmail && user.password == password) {
-        return AppUser(
-          email: user.email,
-          role: user.role,
-        );
+        return AppUser(email: user.email, role: user.role);
       }
     }
 
@@ -76,11 +74,7 @@ class AuthService {
 }
 
 class _DemoUser {
-  _DemoUser({
-    required this.email,
-    required this.password,
-    required this.role,
-  });
+  _DemoUser({required this.email, required this.password, required this.role});
 
   final String email;
   final String password;

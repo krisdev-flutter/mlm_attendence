@@ -15,7 +15,7 @@ class AppPagesWidget extends StatelessWidget {
       initialRoute: initialRoute,
       getPages: AppPages.getPages,
       initialBinding: BindingsBuilder(() {
-        Get.lazyPut<AuthController>(() => AuthController(), fenix: true);
+        Get.put<AuthController>(AuthController());
       }),
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),

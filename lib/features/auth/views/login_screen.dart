@@ -56,8 +56,12 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             child: LayoutBuilder(
               builder: (context, constraints) {
-                final maxWidth = constraints.maxWidth > 600 ? 440.0 : double.infinity;
-                final horizontalPadding = constraints.maxWidth > 600 ? 24.0 : 24.0;
+                final maxWidth = constraints.maxWidth > 600
+                    ? 440.0
+                    : double.infinity;
+                final horizontalPadding = constraints.maxWidth > 600
+                    ? 24.0
+                    : 24.0;
 
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -183,7 +187,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                       return null;
                                     },
                                   ),
-                                  const SizedBox(height: AppConstants.fieldSpacing),
+                                  const SizedBox(
+                                    height: AppConstants.fieldSpacing,
+                                  ),
 
                                   AuthTextField(
                                     label: 'Password',
@@ -202,7 +208,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                       return null;
                                     },
                                   ),
-                                  const SizedBox(height: AppConstants.fieldSpacing),
+                                  const SizedBox(
+                                    height: AppConstants.fieldSpacing,
+                                  ),
 
                                   Obx(
                                     () => LoginButton(
@@ -211,7 +219,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                           : () => _auth.login(),
                                     ),
                                   ),
-                                  const SizedBox(height: AppConstants.fieldSpacing),
+                                  const SizedBox(
+                                    height: AppConstants.fieldSpacing,
+                                  ),
 
                                   if (_auth.errorMessage.value != null &&
                                       _auth.errorMessage.value!.isNotEmpty)

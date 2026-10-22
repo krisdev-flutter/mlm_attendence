@@ -53,7 +53,13 @@ class SummaryCard extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 8),
-              Text(value, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+              Text(
+                value,
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               const Spacer(),
               Text(
                 supportingLabel,

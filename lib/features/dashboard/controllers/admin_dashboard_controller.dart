@@ -66,7 +66,8 @@ class AdminDashboardController extends GetxController {
     }).toList();
 
     result.sort((a, b) {
-      if (a.checkIn == null && b.checkIn == null) return a.name.compareTo(b.name);
+      if (a.checkIn == null && b.checkIn == null)
+        return a.name.compareTo(b.name);
       if (a.checkIn == null) return 1;
       if (b.checkIn == null) return -1;
       return b.checkIn!.compareTo(a.checkIn!);

@@ -23,7 +23,10 @@ class AppPages {
       page: () => const AdminDashboardScreen(),
       binding: AdminDashboardBinding(),
     ),
-    GetPage(name: seniorStaffDashboard, page: () => const SeniorStaffDashboard()),
+    GetPage(
+      name: seniorStaffDashboard,
+      page: () => const SeniorStaffDashboard(),
+    ),
     GetPage(name: staffDashboard, page: () => const StaffDashboard()),
   ];
 }

@@ -2,7 +2,20 @@ class DateFormatter {
   DateFormatter._();
 
   static String formatDate(DateTime date) {
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const months = [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ];
     const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
     return '${weekdays[date.weekday - 1]}, ${date.day} ${months[date.month - 1]} ${date.year}';
   }
@@ -17,6 +30,8 @@ class DateFormatter {
   static bool isToday(DateTime? dateTime) {
     if (dateTime == null) return false;
     final now = DateTime.now();
-    return dateTime.year == now.year && dateTime.month == now.month && dateTime.day == now.day;
+    return dateTime.year == now.year &&
+        dateTime.month == now.month &&
+        dateTime.day == now.day;
   }
 }
